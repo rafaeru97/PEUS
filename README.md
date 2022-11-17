@@ -12,9 +12,9 @@ WiringPI:
 ```sudo dpkg -i wiringpi-latest.deb```  
 ```gpio -v```  
 
-Enable I2C in Raspberry Pi:
-```sudo raspi-config``` 
-Interface Options -> I2C -> Yes 
+Enable I2C in Raspberry Pi:   
+```sudo raspi-config```    
+Interface Options -> I2C -> Yes    
  
 IDE:  
 ```sudo apt-get install qtcreator```  
