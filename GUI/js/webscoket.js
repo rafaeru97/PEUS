@@ -9,6 +9,7 @@ smartHome.init();
 socket.onopen = function(evt) {
     //alert('Connected.');
     $('#status').css('background', 'green');
+    send();
 };
   
 socket.onclose = function(evt) {
