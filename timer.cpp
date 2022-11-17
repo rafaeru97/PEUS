@@ -46,18 +46,6 @@ void Timer::timerFunction()
     QDateTime dt = QDateTime::currentDateTime();
     qDebug() << "[" << dt.toString("hh:mm:ss.z") << "]";
 
-    if(init)
-    {
-        init = false;
-        json m;
-        m["act_temp"] = temp_start;
-        m["act_humi"] = humi_start;
-
-        QString json_message = QString::fromStdString(m.dump());
-        std::cout << "Message sended: " << json_message.toStdString() << std::endl;
-        _server->sendMessage(json_message);
-    }
-
     QString message = _server->reciveMessage();
 
     if(message.length() > 1) {
