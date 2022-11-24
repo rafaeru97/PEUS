@@ -1,6 +1,15 @@
 # PEUS
 Projektowanie Elektrycznych Układów Sterowania
 
+Hardware:
+
+Komenda na sprawdzenie wartości portów w linuxie do odwołania się w programie.
+
+Podłączenie czujników
+Zdjęcie portów raspberry pi 
+Zdjęcie podłączonego czujnika BME280 raspberry pi
+Zdjecie podłączenia czujnika krańcowego
+
 Konfiguracja Systemu:  
 ```sudo apt-get update```  
 ```sudo apt-get upgrade```  
