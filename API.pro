@@ -1,4 +1,5 @@
 QT += webkit webkitwidgets widgets websockets
+LIBS += -lwiringPi
 
 CONFIG += c++11 console
 CONFIG -= app_bundle
@@ -15,12 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += main.cpp \
+    bme280.cpp \
+    button.cpp \
     timer.cpp \
     websocket.cpp \
     object.cpp \
     pid.cpp
 
 HEADERS += \
+    bme280.h \
+    button.h \
     timer.h \
     websocket.h \
     object.h \
