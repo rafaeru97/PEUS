@@ -48,6 +48,10 @@ void Timer::timerFunction()
 
     QString message = _server->reciveMessage();
 
+    // SWITCH
+    qDebug() << "*****";
+    qDebug() << "Button status: " << button.getStatus();
+
     if(message.length() > 1) {
         json j = json::parse(message.toStdString());
         std::cout << "Message recived: " << message.toStdString() << std::endl;

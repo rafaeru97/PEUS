@@ -9,6 +9,7 @@
 #include "websocket.h"
 #include "object.h"
 #include "pid.h"
+#include "button.h"
 
 
 class Timer : public QObject
@@ -40,6 +41,8 @@ private:
 
     Object temp_object = Object(1, 1, 10, temp_start);
     Object humi_object = Object (1, 1, 10, humi_start);
+
+    Button button = Button(25);
 };
 
 #endif // MAIN_H
