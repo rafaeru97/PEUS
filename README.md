@@ -35,8 +35,18 @@ Zdjecie podłączenia czujnika krańcowego
 
 ### Schemat blokowy programu
 
-`` print("Hello World") ``
-```` print("Hello World") ````
+`` print("Hello World") ``  
+```` print("Hello World") ````  
+
+from sensor import DS18B20
+
+ds = DS18B20('28-XXXXXXXXXXXX')
+t = ds.temperature()  # read temperature
+
+print(t)    # this is a namedtuple
+print(t.C)  # Celcius
+print(t.F)  # Fahrenheit
+print(t.K)  # Kelvin
 
 ### Bibliografia:  
 https://roboticsbackend.com/wiringpi-i2c-tutorial-rasperry-pi-adxl345/  
