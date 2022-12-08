@@ -35,6 +35,9 @@ Zdjecie podłączenia czujnika krańcowego
 
 ### Schemat blokowy programu
 
+`` print("Hello World") ``
+```` print("Hello World") ````
+
 ### Bibliografia:  
 https://roboticsbackend.com/wiringpi-i2c-tutorial-rasperry-pi-adxl345/  
 https://github.com/andreiva/raspberry-pi-bme280  
