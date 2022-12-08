@@ -62,7 +62,8 @@ void Timer::timerFunction()
 
         double set_temp = std::stod(j["set_temp"].get<std::string>());
         double set_humi = std::stod(j["set_humi"].get<std::string>());
-        bool set_wind = j["set_wind"].get<bool>();
+        //bool set_wind = j["set_wind"].get<bool>();
+        bool set_wind = button.getStatus();
 
         double out_pid_temp = temp_pid.calculate(set_temp);
         double out_pid_humi = humi_pid.calculate(set_humi);
@@ -90,6 +91,7 @@ void Timer::timerFunction()
         json m;
         m["act_temp"] = out_temp;
         m["act_humi"] = out_humi;
+        m["set_wind"] = set_wind;
         m["uchyb_temp"] = temp_pid.getError();
         m["uchyb_humi"] = humi_pid.getError();
         if(set_wind) {

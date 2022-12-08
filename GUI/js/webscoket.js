@@ -23,6 +23,7 @@ socket.onmessage = function(evt) {
 
     var temp_output = (Math.round(obj.act_temp * 10))/10;
     var humi_output = (Math.round(obj.act_humi * 10))/10;
+    var set_window = obj.set_wind;
     var temp_cv = (Math.round(obj.ster_temp * 10))/10;
     var humi_cv = (Math.round(obj.ster_humi * 10))/10;
     var temp_uchyb = (Math.round(obj.uchyb_temp * 10))/10;
@@ -30,7 +31,7 @@ socket.onmessage = function(evt) {
     var temp_zakl = (Math.round(obj.zakl_temp * 10))/10;
     var humi_zakl = (Math.round(obj.zakl_humi * 10))/10;
     send();
-    smartHome.update(temp_output, humi_output, temp_cv, humi_cv, temp_uchyb, humi_uchyb, temp_zakl, humi_zakl);
+    smartHome.update(temp_output, humi_output, set_window, temp_cv, humi_cv, temp_uchyb, humi_uchyb, temp_zakl, humi_zakl);
 
 };
   
@@ -51,13 +52,6 @@ var wind_checkBox = document.getElementById("toggle");
 var set_wind = false;
 
 function send() {
-	if (wind_checkBox.checked == true) {
-		set_wind = true;
-		
-	} else {
-		set_wind = false;
-	}
-
 	var message = {"set_temp": temp_slider.value, "set_humi": humi_slider.value, "set_wind": set_wind};
 
 	console.log(message);

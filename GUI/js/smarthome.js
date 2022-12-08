@@ -12,6 +12,7 @@
         var defaults = {
             currentTemp: 20,
             currentHumidity: 50,
+	    setWindow: 0,
             dataTemp: [],
             dataHumidity: [],
             tempControlValue: [],
@@ -43,7 +44,7 @@
         this.createCharts();
     }
 
-    SmartHome.prototype.update = function( newTemp, newHum, newTempCV, newHumiCV, newTempUchyb, newHumiUchyb, newTempZakl, newHumiZakl ) {
+    SmartHome.prototype.update = function( newTemp, newHum, newWind, newTempCV, newHumiCV, newTempUchyb, newHumiUchyb, newTempZakl, newHumiZakl ) {
         if( this.options.dataTemp.length == 10 ) {
             this.options.dataTemp.shift();
         }
@@ -76,6 +77,8 @@
         this.options.humiUchyb.push(newHumiUchyb);
 	this.options.tempZakl.push(newTempZakl);
 	this.options.humiZakl.push(newHumiZakl);
+
+	this.options.setWindow = newWind;
         
         myChart1.update();
         myChart2.update();
@@ -108,7 +111,7 @@
             $('#humidity-icon').css('opacity', 0.2);
             isHumidifier = false;
         }
-        if ($('#toggle').prop('checked')) {
+        if (this.options.setWindow) {
             isOpenWindow = true
         } else {
             isOpenWindow = false
