@@ -7,9 +7,7 @@ Komenda na sprawdzenie wartości portów w linuxie do odwołania się w programi
 
 Podłączenie czujników
 Zdjęcie portów raspberry pi 4
-<div style="width:400px ; height: 400px">
-![Employee data](./Images/Zdjecie_portow_raspberry_PI_4.png)  
-<div>
+![Alt data](./Images/Zdjecie_portow_raspberry_PI_4.png)  
 Zdjęcie podłączonego czujnika BME280 raspberry pi
 Zdjecie podłączenia czujnika krańcowego
 
