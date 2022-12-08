@@ -6,7 +6,8 @@ Hardware:
 Komenda na sprawdzenie wartości portów w linuxie do odwołania się w programie.
 
 Podłączenie czujników
-Zdjęcie portów raspberry pi 
+Zdjęcie portów raspberry pi 4
+![Alt text](./Images/Zdjecie_portow_raspberry_PI_4.png)
 Zdjęcie podłączonego czujnika BME280 raspberry pi
 Zdjecie podłączenia czujnika krańcowego
 
