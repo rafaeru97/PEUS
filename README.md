@@ -4,6 +4,7 @@ Projektowanie Elektrycznych Układów Sterowania
 Hardware:
 
 Komenda na sprawdzenie wartości portów w linuxie do odwołania się w programie.
+'''gpio readall'''  
 
 Podłączenie czujników
 Zdjęcie portów raspberry pi 4
