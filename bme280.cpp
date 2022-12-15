@@ -21,6 +21,7 @@ void Sensor::getData() {
 
     bme280_raw_data raw;
     getRawData(_deviceId, &raw);
+
     int32_t t_fine = getTemperatureCalibration(&cal, raw.temperature);
     _temperature = compensateTemperature(t_fine); // C
     _pressure = compensatePressure(raw.pressure, &cal, t_fine) / 100;

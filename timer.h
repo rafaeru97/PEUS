@@ -10,6 +10,7 @@
 #include "object.h"
 #include "pid.h"
 #include "button.h"
+#include "bme280.h"
 
 
 class Timer : public QObject
@@ -43,6 +44,7 @@ private:
     Object humi_object = Object (1, 1, 10, humi_start);
 
     Button button = Button(25);
+    Sensor bme280 = Sensor(BME280_ADDRESS);
 };
 
 #endif // MAIN_H

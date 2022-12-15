@@ -52,13 +52,21 @@ void Timer::timerFunction()
     qDebug() << "*****";
     qDebug() << "Button status: " << button.getStatus();
 
+    // BME280
+    if(bme280.getDeviceId() < 0) {
+      qDebug() << "Sensor not found.";
+    }
+    else {
+        qDebug() << "Sensor found (" << bme280.getDeviceId() << ")";
+    }
+
     if(message.length() > 1) {
         json j = json::parse(message.toStdString());
         std::cout << "Message recived: " << message.toStdString() << std::endl;
         std::cout << "JSON conversion: " << j.dump(4) << std::endl;
         std::cout << "Temperature: " << j["set_temp"] << std::endl;
         std::cout << "Humidity: " << j["set_humi"] << std::endl;
-        std::cout << "Window: " << j["set_wind"] << std::endl;
+        //std::cout << "Window: " << j["set_wind"] << std::endl;
 
         double set_temp = std::stod(j["set_temp"].get<std::string>());
         double set_humi = std::stod(j["set_humi"].get<std::string>());
@@ -85,8 +93,9 @@ void Timer::timerFunction()
         temp_pid.setValue(obj_temp);
         humi_pid.setValue(obj_humi);
 
-        double out_temp = temp_pid.getValue();
-        double out_humi = humi_pid.getValue();
+        bme280.getData();
+        double out_temp = bme280.getTemperature();
+        double out_humi = bme280.getHumidity();
 
         json m;
         m["act_temp"] = out_temp;

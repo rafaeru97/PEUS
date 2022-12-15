@@ -6,8 +6,6 @@
 #include <QWebSocket>
 #include <QWebSocketServer>
 #include "websocket.h"
-#include "bme280.h"
-#include "button.h"
 
 //Debug
 #include <QDebug>
@@ -41,17 +39,6 @@ int main(int argc, char *argv[])
     qDebug() << "An attempt to link Timer with WebSocket Server.";
     clock->timerSetServer(server);
     qDebug() << "Linking successfully.";
-
-    //SENSOR BME280
-    qDebug() << "*****";
-    Sensor bme280(BME280_ADDRESS);
-      if(bme280.getDeviceId() < 0)
-        qDebug() << "Sensor not found.";
-      else {
-          qDebug() << "Sensor found (" << bme280.getDeviceId() << ")";
-          bme280.getData();
-          qDebug() << "Temperature: " << bme280.getTemperature() << " | Pressure: " << bme280.getPressure() << " | Humidity: " << bme280.getHumidity();
-      }
 
     //CREATING WEBVIEW
     qDebug() << "*****";
