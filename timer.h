@@ -11,7 +11,7 @@
 #include "pid.h"
 #include "button.h"
 #include "bme280.h"
-
+#include "sql.h"
 
 class Timer : public QObject
 {
@@ -20,6 +20,7 @@ class Timer : public QObject
 public:
     explicit Timer(int delay = 1000, QObject* parent = nullptr);
     ~Timer();
+    Sql db = Sql();
 
 public slots:
     int timerGetDelay();

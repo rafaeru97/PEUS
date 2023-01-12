@@ -13,6 +13,7 @@ Timer::Timer(int delay, QObject *parent) : QObject(parent)
     _timer = new QTimer();
     QObject::connect(_timer, SIGNAL(timeout()), this, SLOT(timerFunction()));
     _timer->start(delay);
+    db.configureConnection("localhost", "db", "root", "haslo123");
 }
 
 Timer::~Timer()
@@ -43,6 +44,7 @@ void Timer::timerSetServer(WebSocket *server)
 
 void Timer::timerFunction()
 {
+    qDebug() << "Database connection: " << db.getConnection();
     QDateTime dt = QDateTime::currentDateTime();
     qDebug() << "[" << dt.toString("hh:mm:ss.z") << "]";
 
@@ -115,6 +117,7 @@ void Timer::timerFunction()
             m["zakl_humi"] = 0;
         }
 
+        db.insertMeasurements(set_temp, set_humi, out_temp, out_humi, set_wind);
         QString json_message = QString::fromStdString(m.dump());
         std::cout << "Message sended: " << json_message.toStdString() << std::endl;
         _server->sendMessage(json_message);

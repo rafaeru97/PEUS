@@ -1,4 +1,4 @@
-QT += webkit webkitwidgets widgets websockets
+QT += webkit webkitwidgets widgets websockets sql
 LIBS += -lwiringPi
 
 CONFIG += c++11 console
@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp \
     bme280.cpp \
     button.cpp \
+    sql.cpp \
     timer.cpp \
     websocket.cpp \
     object.cpp \
@@ -26,6 +27,7 @@ SOURCES += main.cpp \
 HEADERS += \
     bme280.h \
     button.h \
+    sql.h \
     timer.h \
     websocket.h \
     object.h \
