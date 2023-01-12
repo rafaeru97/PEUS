@@ -13,10 +13,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ### System configuration:  
 To use above program we need to install/update required libraries for the project by doing the steps below.
 
-#### Qt5:
+#### Libraries to instal
+#### Qt5 :
 ```sudo apt-get update```  
 ```sudo apt-get upgrade```  
-```sudo apt-get install qtbase5-dev libqt5webkit5-dev libqt5websockets5-dev```    
+```sudo apt-get install qtbase5-dev libqt5webkit5-dev libqt5websockets5-dev libqt5sql5-mysql```
 
 #### WiringPI:    
 ```sudo apt-get install libi2c-dev i2c-tools```    
@@ -31,6 +32,9 @@ In our project we used twp-way bus I2C which we need to enable
 #### Enable I2C in Raspberry Pi:   
 ```sudo raspi-config```    
 Interface Options -> I2C -> Yes    
+
+
+
 
 ### Hardware:
 Check the values of ports in linux to know what to input in program
