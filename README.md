@@ -3,10 +3,10 @@
 ### Description
 This is home assitant designed to be used with Raspberry Pi.
 The assistant will require sensor of humidity, temeprature, pressure and switch On-Off. 
-In our project we used:
--Raspberry Pi 4
--Sensor BME280
--Micro Limit Switch Kema Keur SM-31
+In our project we used:  
+-Raspberry Pi 4  
+-Sensor BME280  
+-Switch  
 
 ### System configuration:  
 To use above program we need to install/update required libraries for the project by doing the steps below.
