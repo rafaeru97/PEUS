@@ -1,12 +1,7 @@
 ## Projektowanie Elektrycznych Układów Sterowania (PEUS)
 
 ### Description
-This is home assitant designed to be used with Raspberry Pi.
-The assistant will require sensor of humidity, temeprature, pressure and switch On-Off. 
-In our project we used:  
--Raspberry Pi 4  
--Sensor BME280  
--Switch  
+Smart home project written in C++ using Raspberry Pi 4 microcomputer. The project was carried out as part of the PEUS course. We used a temperature, humidity, and pressure BME280 sensor and a switch to check the state of the window as peripheral devices. The whole was created using the Qt framework. The code works as a local Server and Client. The Client is in the form of a stripped-down browser version, and the entire graphical interface was written using Javascript, HTML, and CSS. User communication with the entire device is provided through WebSocket technology. Additionally, the application allows data collection to the database, which in our case was MariaDB.
 
 ### System configuration:  
 To use above program we need to install/update required libraries for the project by doing the steps below.
@@ -39,7 +34,6 @@ Picture of Raspberry Pi 4
 ![Alt data](./Images/Zdjecie_portow_raspberry_PI_4.png)  
 
 #### Connection of the sensors
-
 Picture of connected sensor BME 280 to Raspberry Pi 4
 
 Picture of connected limit switch
