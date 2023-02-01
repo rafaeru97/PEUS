@@ -2,7 +2,9 @@
 
 ### Description
 Smart home project written in C++ using Raspberry Pi 4 microcomputer. The project was carried out as part of the PEUS course. We used a temperature, humidity, and pressure BME280 sensor and a switch to check the state of the window as peripheral devices. The whole was created using the Qt framework. The code works as a local Server and Client. The Client is in the form of a stripped-down browser version, and the entire graphical interface was written using Javascript, HTML, and CSS. User communication with the entire device is provided through WebSocket technology. Additionally, the application allows data collection to the database, which in our case was MariaDB.   
-<img align="center" width="100" height="100" src="./Images/interface.png">
+<p align="center">
+  <img src="./Images/interface.png">
+</p>
 
 ### System configuration:  
 To use above program we need to install/update required libraries for the project by doing the steps below.
