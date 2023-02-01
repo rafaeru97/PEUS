@@ -21,7 +21,7 @@ To use above program we need to install/update required libraries for the projec
 #### IDE:  
 ```sudo apt-get install qtcreator```  
 
-In our project we used twp-way bus I2C which we need to enable
+In our project we used two-way bus I2C which we need to enable
 #### Enable I2C in Raspberry Pi:   
 ```sudo raspi-config```    
 Interface Options -> I2C -> Yes    
