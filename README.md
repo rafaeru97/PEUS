@@ -6,7 +6,7 @@ Smart home project written in C++ using Raspberry Pi 4 microcomputer. The projec
 ### System configuration:  
 To use above program we need to install/update required libraries for the project by doing the steps below.
 
-#### Libraries to instal
+#### Libraries to install
 #### Qt5 :
 ```sudo apt-get update```  
 ```sudo apt-get upgrade```  
@@ -32,11 +32,6 @@ Check the values of ports in linux to know what to input in program
 
 Picture of Raspberry Pi 4
 ![Alt data](./Images/Zdjecie_portow_raspberry_PI_4.png)  
-
-#### Connection of the sensors
-Picture of connected sensor BME 280 to Raspberry Pi 4
-
-Picture of connected limit switch
 
 ### Bibliography:
 https://roboticsbackend.com/wiringpi-i2c-tutorial-rasperry-pi-adxl345/  
